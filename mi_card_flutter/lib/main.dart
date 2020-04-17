@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: Container(
           color: Colors.white,
+          child: Text('Hello'),
         ),
       ),
     );
