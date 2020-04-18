@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            verticalDirection: VerticalDirection.up,
             children: <Widget>[
               Container(
                 height: 100.0,
