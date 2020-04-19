@@ -37,12 +37,25 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Container(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                padding: EdgeInsets.all(10.0),
                 child: Row(
                   children: <Widget>[
                     Icon(
-                      Icons.ac_unit,
-                      size: 100.0,
-                    )
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      '+57 312 310 6898',
+                      style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontFamily: 'SourceSansPro',
+                          fontSize: 20.0),
+                    ),
                   ],
                 ),
               ),
