@@ -36,6 +36,16 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+              Container(
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.ac_unit,
+                      size: 100.0,
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
