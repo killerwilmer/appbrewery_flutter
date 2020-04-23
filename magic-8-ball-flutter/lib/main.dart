@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(
       MaterialApp(
-        home: new BallPage(),
+        home: BallPage(),
       ),
     );
 
@@ -15,7 +15,7 @@ class BallPage extends StatelessWidget {
         backgroundColor: Colors.blue[900],
         title: Text('Ask Me Anything'),
       ),
-      body: Container(),
+      body: Ball(),
     );
   }
 }
@@ -28,6 +28,10 @@ class Ball extends StatefulWidget {
 class _BallState extends State<Ball> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Image(
+        image: AssetImage('images/ball1.png'),
+      ),
+    );
   }
 }
