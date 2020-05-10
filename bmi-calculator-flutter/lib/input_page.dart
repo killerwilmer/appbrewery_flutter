@@ -16,18 +16,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Color maleCardColour = inactiveCardColour;
-  Color femaleCardColour = inactiveCardColour;
-
-  void updateColour({@required Gender selectedGender}) {
-    if (selectedGender == Gender.male) {
-      maleCardColour = activeCardColour;
-      femaleCardColour = inactiveCardColour;
-    } else {
-      maleCardColour = inactiveCardColour;
-      femaleCardColour = activeCardColour;
-    }
-  }
+  Gender selectedGender;
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +33,13 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        updateColour(selectedGender: Gender.male);
+                        selectedGender = Gender.male;
                       });
                     },
                     child: ReusableCard(
-                      colour: maleCardColour,
+                      colour: selectedGender == Gender.male
+                          ? activeCardColour
+                          : inactiveCardColour,
                       cardChild: IconContent(
                         iconCard: FontAwesomeIcons.mars,
                         labelCard: 'MALE',
@@ -60,11 +51,13 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        updateColour(selectedGender: Gender.female);
+                        selectedGender = Gender.female;
                       });
                     },
                     child: ReusableCard(
-                      colour: femaleCardColour,
+                      colour: selectedGender == Gender.female
+                          ? activeCardColour
+                          : inactiveCardColour,
                       cardChild: IconContent(
                         iconCard: FontAwesomeIcons.venus,
                         labelCard: 'FEMALE',
