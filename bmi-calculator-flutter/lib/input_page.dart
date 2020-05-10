@@ -5,6 +5,7 @@ import 'icon_content.dart';
 
 const bottomContainerHeight = 80.0;
 const activeCardColour = Color(0xFF1D1E33);
+const inactiveCardColour = Color(0xFF111328);
 const bottomContainerColour = Color(0xFFEB1555);
 
 class InputPage extends StatefulWidget {
@@ -13,6 +14,19 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Color maleCardColour = inactiveCardColour;
+  Color femaleCardColour = inactiveCardColour;
+
+  void updateColour({@required int gender}) {
+    if (gender == 1) {
+      maleCardColour = activeCardColour;
+      femaleCardColour = inactiveCardColour;
+    } else {
+      maleCardColour = inactiveCardColour;
+      femaleCardColour = activeCardColour;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,10 +41,12 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      print('MALE');
+                      setState(() {
+                        updateColour(gender: 1);
+                      });
                     },
                     child: ReusableCard(
-                      colour: activeCardColour,
+                      colour: maleCardColour,
                       cardChild: IconContent(
                         iconCard: FontAwesomeIcons.mars,
                         labelCard: 'MALE',
@@ -41,10 +57,12 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      print('FEMALE');
+                      setState(() {
+                        updateColour(gender: 2);
+                      });
                     },
                     child: ReusableCard(
-                      colour: activeCardColour,
+                      colour: femaleCardColour,
                       cardChild: IconContent(
                         iconCard: FontAwesomeIcons.venus,
                         labelCard: 'FEMALE',
