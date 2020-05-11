@@ -76,6 +76,10 @@ class _InputPageState extends State<InputPage> {
                         '180',
                         style: kLabelNumber,
                       ),
+                      Text(
+                        'cm',
+                        style: kLabelTextStyle,
+                      )
                     ],
                   ),
                 ],
