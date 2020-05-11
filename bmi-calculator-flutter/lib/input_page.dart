@@ -70,6 +70,14 @@ class _InputPageState extends State<InputPage> {
                     'HEIGHT',
                     style: kLabelTextStyle,
                   ),
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        '180',
+                        style: kLabelNumber,
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
