@@ -1,11 +1,16 @@
 import 'package:bmi_calculator/components/bottom_button.dart';
 import 'package:bmi_calculator/constants.dart';
 import 'package:bmi_calculator/components/reusable_card.dart';
+import 'package:bmi_calculator/result_model.dart';
 import 'package:flutter/material.dart';
 
 class ResultsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    RouteSettings settings = ModalRoute.of(context).settings;
+
+    ResultModel resultModel = settings.arguments;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Results'),
@@ -33,15 +38,15 @@ class ResultsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'Normal',
+                    resultModel.resultText.toUpperCase(),
                     style: kResultTextStyle,
                   ),
                   Text(
-                    '18.3',
+                    resultModel.bmiResult,
                     style: kBMITextStyle,
                   ),
                   Text(
-                    'Your BMI is quite low, you should et more.',
+                    resultModel.interpretation,
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
                   ),
