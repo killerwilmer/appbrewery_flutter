@@ -35,22 +35,10 @@ class _CityScreenState extends State<CityScreen> {
                 padding: EdgeInsets.all(20.0),
                 child: TextField(
                   style: TextStyle(color: Colors.grey.shade800),
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Colors.white,
-                    icon: Icon(
-                      Icons.location_city,
-                      color: Colors.white,
-                    ),
-                    hintText: 'Enter City Name',
-                    hintStyle: TextStyle(color: Colors.grey),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10.0),
-                      ),
-                      borderSide: BorderSide.none,
-                    ),
-                  ),
+                  decoration: kTextFieldInputDecoration,
+                  onChanged: (value) {
+                    print(value);
+                  },
                 ),
               ),
               FlatButton(
