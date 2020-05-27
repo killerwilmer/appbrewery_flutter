@@ -36,9 +36,9 @@ const kUrlApi = 'https://rest.coinapi.io/v1/exchangerate/';
 const kApiKey = 'xxx';
 
 class CoinData {
-  Future<ResponseCoin> getCoinData() async {
+  Future<ResponseCoin> getCoinData(String currency) async {
     final response = await http.get(
-      kUrlApi + 'BTC' + '/' + 'USD',
+      kUrlApi + 'BTC' + '/$currency',
       headers: {'X-CoinAPI-Key': kApiKey},
     );
 
