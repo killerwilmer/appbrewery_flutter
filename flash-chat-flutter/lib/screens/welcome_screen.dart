@@ -26,10 +26,24 @@ class _WelcomeScreenState extends State<WelcomeScreen>
 
     animationController.forward();
 
+    animation.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        animationController.reverse(from: 1.0);
+      } else if (status == AnimationStatus.dismissed) {
+        animationController.forward();
+      }
+    });
+
     animationController.addListener(() {
       setState(() {});
       print(animation.value);
     });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
   }
 
   @override
