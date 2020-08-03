@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "178483092060",
+    "firebase_url": "https://flash-chat-bafed.firebaseio.com",
+    "project_id": "flash-chat-bafed",
+    "storage_bucket": "flash-chat-bafed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178483092060:android:7981e750bd962dbb856499",
+        "android_client_info": {
+          "package_name": "co.killerwilmer.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178483092060-enak38q8mmjraejen6f4hmc2l7niriuq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-FVj0FeX1xAf3XXbkKJTCMh3f8EBPccQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178483092060-enak38q8mmjraejen6f4hmc2l7niriuq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
