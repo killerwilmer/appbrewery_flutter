@@ -29,10 +29,14 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 48.0,
             ),
             TextField(
+              keyboardType: TextInputType.emailAddress,
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.grey.shade700),
               onChanged: (value) {
                 //Do something with the user input.
               },
               decoration: InputDecoration(
+                hintStyle: TextStyle(color: Colors.grey.shade300),
                 hintText: 'Enter your email',
                 contentPadding:
                     EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
@@ -55,10 +59,14 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 8.0,
             ),
             TextField(
+              obscureText: true,
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.grey.shade700),
               onChanged: (value) {
                 //Do something with the user input.
               },
               decoration: InputDecoration(
+                hintStyle: TextStyle(color: Colors.grey.shade300),
                 hintText: 'Enter your password.',
                 contentPadding:
                     EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
